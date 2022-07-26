@@ -1,0 +1,27 @@
+<body id="body">
+    <div class="card" id="card">
+        <div class="search">
+            <mat-form-field appearance="standard">
+                <mat-label>Zip Code or City</mat-label>
+                <input matInput id="zip" (keydown.enter)="getTown();">
+                <mat-icon matSuffix>
+                    <button mat-raised-button (click)="getTown();">
+                        <mat-icon>
+                            search
+                        </mat-icon>
+                    </button>
+                </mat-icon>
+                <mat-hint>Zip Code May Be More Accurate</mat-hint>
+            </mat-form-field>
+        </div>
+        <br>
+        <div class="weather">
+            <h1 class="city">Weather in {{town}}</h1>
+            <img *ngIf="linkReady" src={{link}} alt="">
+            <div class="temp">Temperature: {{temp}}°F</div>
+            <div class="description">Sky: {{clouds}}</div>
+            <div class="humidity">Humidity: {{humidity}}%</div>
+            <div class="wind" id="wind">Wind Speed: {{wind}} mph</div>
+        </div>
+    </div>
+</body>
