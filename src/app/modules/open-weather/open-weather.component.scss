@@ -1,9 +1,15 @@
 body{
     display: flex;
     justify-content: center;
-    // align-items: center;
-    background-color: lightgreen;
-    overflow: auto;
+    align-items: center;
+    background-image: url('/assets/clouds1.jpg');
+    background-size: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.title{
+    text-align: center;
 }
 
 .icon{
@@ -11,9 +17,11 @@ body{
 }
 
 .card{
+    text-align: center;
     background-color: rgba(255,255,255,0.5);
-    margin-top: 5%;
-    height: 60vh;
+    margin-top: 2%;
+    min-height: 55vh;
+    height: fit-content;
     width: 100%;
     max-width: 40%;
     border-radius: 30px;
@@ -21,23 +29,43 @@ body{
     font-size: 1.4rem;
     line-height: 1.2;
     overflow: auto;
-    
+}
+
+.temp{
+    font-size: 3rem;
+}
+
+.glass:hover{
+    color: darkslateblue;
 }
 
 @media(max-width: 500px){
-
+    body{
+        background-image: url('/assets/cloudsMobile.jpg');
+        height: 180vw;
+    }
+    
     .card{
         max-width: 60%;
-        height: 50vh;
+        min-height: 50vh;
+    height: fit-content;
         font-size: 1.5em;
+        margin-bottom: 5vh;
     }
 
 }
 
-@media(min-width: 501px) and (max-width: 1000px){
+@media(min-width: 501px) and (max-width: 1200px){
+
+     body{
+        background-image: url('/assets/cloudsMobile.jpg');
+        height: auto;
+        }
     
     .card{
         margin-top: 3%;
-        height: 70vh;
+        min-height: 50vh;
+        height: fit-content;
+        margin-bottom: 5vh;
     }
 }
